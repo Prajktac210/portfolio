@@ -322,63 +322,132 @@ profile-photo .img{
 
 
 /*---------------------------Projects---------------------------*/
-.project-content{
+.project-content {
   padding: 90px 0;
-  /* color:#fff;  */
 }
-.project-title{
+
+.project-title {
   margin-bottom: 60px;
   text-align: center;
 }
-.project-title h4{
+
+.project-title h4 {
   text-transform: uppercase;
   font-size: 40px;
   line-height: 40px;
   color: #fed700;
   margin-bottom: 20px;
 }
-.project-title p{
+
+.project-title p {
   color: #e5e5e5;
 }
-.projects{
+
+/* Project Cards Layout */
+.projects {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
 }
-.project{
-    /* padding: 30px 15px; */
-    color: #e5e5e5;
-    border: 2px solid #e5e5e5;
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-    padding: 25px;
-    text-align: center;
-    flex-basis: 32%;
-    transition: .3s;
+
+/* Individual Project Card */
+.project {
+  padding: 25px;
+  color: #e5e5e5;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  flex-basis: 32%;
+  transition: all 0.3s ease;
+  background-color: #1a1a1a;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
-.project i{
-  background-color: #fed700;
-  width: 60px;
-  height: 60px;
-  color: #333;
-  font-size: 26px;
-  line-height: 60px;
-  border-radius: 50%;
+
+.project:hover {
+  border-color: #fed700;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(254, 215, 0, 0.2);
 }
-.project h4{
+
+.project h4 {
   font-size: 26px;
   text-transform: capitalize;
   margin: 20px 0;
+  color: #fed700;
 }
-.project p{
+
+.project p {
   text-align: justify;
-}
-.project:hover{
-  border-color: #fed700;
+  font-size: 15px;
 }
 
+/* Buttons Container */
+.project-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+/* Buttons */
+.btn {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 120px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* GitHub Button */
+.github-btn {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.github-btn:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+/* Live Button */
+.live-btn {
+  background: #00d9ff;
+  color: #000;
+  border: 1px solid #00aabb;
+}
+
+.live-btn:hover {
+  background: #0ff;
+  transform: scale(1.05);
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+  .project {
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex-basis: 100%;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
 
 /*---------------------------Contact Me---------------------------*/
 .contact-section {
